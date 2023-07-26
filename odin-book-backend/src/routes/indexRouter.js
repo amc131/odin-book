@@ -1,7 +1,8 @@
-const express = require('express');
+import express from 'express';
+import indexPage from '../controllers/index';
 
-const router = express.Router();
+const indexRouter = express.Router();
 
-router.get('/', (req, res) => res.status(200).json({ message: 'Welcome to Express API' }));
+indexRouter.get('/', indexPage);
 
-module.exports = router;
+export default indexRouter;
