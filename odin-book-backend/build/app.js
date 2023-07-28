@@ -1,12 +1,18 @@
 "use strict";
 
-var express = require('express');
-var router = require('./routes/indexRouter');
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _express = _interopRequireDefault(require("express"));
+var _indexRouter = _interopRequireDefault(require("./routes/indexRouter"));
 require('dotenv').config();
-var app = express();
-app.use(express.json());
-app.use(express.urlencoded({
+var app = (0, _express["default"])();
+app.use(_express["default"].json());
+app.use(_express["default"].urlencoded({
   extended: true
 }));
-app.use('/index', router);
-module.exports = app;
+app.use('/index', _indexRouter["default"]);
+var _default = app;
+exports["default"] = _default;
